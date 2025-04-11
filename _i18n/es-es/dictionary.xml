@@ -4510,4 +4510,6 @@ uno con la definición modificada y precisa.</block>
   <block id="e932e8b67111a2dc118d7599f04cdc8b" category="paragraph">El aprovisionador de Astra Control restaura los datos a partir de la snapshot. Es posible verificar el estado de restauración de la Snapshot.</block>
   <block id="454c5148c2a664f37fc49833dc491272" category="list-text">En la mayoría de los casos, el aprovisionador de Astra Control no volverá a intentar automáticamente la operación en caso de fallo. Deberá realizar la operación de nuevo.</block>
   <block id="c83b74c2020dd836f5b401ecda0da78c" category="list-text">Es posible que el administrador deba conceder permiso al usuario de Kubernetes sin acceso de administrador para crear una CR TASR en su espacio de nombres de la aplicación.</block>
+  <block id="fd2382cbf04a0cd551917ebb29238078" category="paragraph">Cuando se utiliza nvme/tcp en entornos k8s con nombres de nodos largos, los pods no se pueden conectar al almacenamiento.</block>
+  <block id="aa68fd6175a82d0d7c1dda4f60cac719" category="paragraph">Reduzca el nombre del nodo para que el nombre del subsistema tenga menos de 64 caracteres.</block>
 </blocks>
