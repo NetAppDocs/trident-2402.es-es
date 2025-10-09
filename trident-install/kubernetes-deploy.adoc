@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: trident-get-started/kubernetes-deploy.html 
-keywords: deploy, astra trident, methods, operator, tridentctl, helm, tanzu, vmware 
+keywords: deploy, astra trident, methods, operator, tridentctl, helm, tanzu, vmware, netapp console 
 summary: 'Puede instalar Astra Trident con el operador Trident (manualmente o mediante Helm) o con `tridentctl`. En este tema se proporciona información importante para seleccionar el proceso de instalación adecuado.' 
 ---
 = Obtenga más información sobre la instalación de Astra Trident
@@ -115,10 +115,10 @@ Cuando la versión de Kubernetes del clúster se actualiza a una versión compat
 NOTE: Si se actualiza el clúster a una versión no compatible, el operador evita la instalación de Astra Trident. Si ya se ha instalado Astra Trident con el operador, se muestra una advertencia para indicar que Astra Trident está instalada en una versión de Kubernetes no compatible.
 
 ====
-.<strong> gestiona clústeres a través de BlueXP (anteriormente Cloud Manager)</strong>
+.Administración de clústeres de Kubernetes mediante la NetApp Console
 [%collapsible]
 ====
-Con link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/concept-kubernetes.html["Astra Trident con BlueXP"^], Puede realizar una actualización a la versión más reciente de Astra Trident, agregar y gestionar clases de almacenamiento, conectarlos a entornos de trabajo y realizar backups de volúmenes persistentes mediante Cloud Backup Service. BlueXP admite la puesta en marcha de Astra Trident con el operador de Trident, ya sea manualmente o mediante Helm.
+Con Astra Trident mediante la NetApp Console, puede actualizar a la última versión de Astra Trident, agregar y administrar clases de almacenamiento y conectarlas a entornos de trabajo, y realizar copias de seguridad de volúmenes persistentes mediante el Cloud Backup Service.  La consola admite la implementación de Astra Trident mediante el operador Trident , ya sea manualmente o usando Helm.
 
 ====
 
