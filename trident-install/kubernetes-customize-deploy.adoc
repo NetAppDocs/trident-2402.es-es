@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: trident-get-started/kubernetes-customize-deploy.html 
+permalink: trident-install/kubernetes-customize-deploy.html 
 keywords: deploy, trident, methods, operator, tridentctl, helm, attributes, customize, tridentorchestrator, smb, windows 
 summary: 'El operador Trident le permite personalizar la manera en que se instala Astra Trident mediante los atributos del `TridentOrchestrator` espec.' 
 ---
@@ -16,6 +16,7 @@ El operador Trident le permite personalizar la instalación de Astra Trident con
 
 
 
+[[understanding-controller-pods-and-node-pods]]
 == Descripción de los pods de la controladora y los pods de nodo
 
 Astra Trident se ejecuta como un único pod de la controladora, más un pod de nodos en cada nodo de trabajo del clúster. El pod del nodo debe ejecutarse en cualquier host en el que desee montar potencialmente un volumen Astra Trident.
@@ -28,6 +29,7 @@ Kubernetes link:https://kubernetes.io/docs/concepts/scheduling-eviction/assign-p
 
 
 
+[[configuration-options]]
 == Opciones de configuración
 
 
@@ -126,6 +128,7 @@ NOTE: Para obtener más información sobre el formato de los parámetros del pod
 
 
 
+[[details-about-force-detach]]
 === Detalles acerca de forzar separación
 
 Forzar separación está disponible para `ontap-san` y.. `ontap-san-economy` solamente. Antes de habilitar la desconexión forzada, se debe habilitar el cierre de nodos (NGN) no controlado en el clúster de Kubernetes. Para obtener más información, consulte link:https://kubernetes.io/docs/concepts/architecture/nodes/#non-graceful-node-shutdown["Kubernetes: Cierre de nodo sin gracia"^].
@@ -151,6 +154,7 @@ Cuando se restaure el estado del nodo y se elimine el tinte, Astra Trident:
 
 
 
+[[sample-configurations]]
 == Configuraciones de ejemplo
 
 Puede utilizar los atributos en <<Opciones de configuración>> al definir `TridentOrchestrator` para personalizar la instalación.

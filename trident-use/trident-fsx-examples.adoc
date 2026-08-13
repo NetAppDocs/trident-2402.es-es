@@ -16,6 +16,7 @@ Obtenga información acerca de las opciones de configuración de back-end para A
 
 
 
+[[backend-configuration-options]]
 == Opciones de configuración del back-end
 
 Consulte la siguiente tabla para ver las opciones de configuración del back-end:
@@ -155,6 +156,7 @@ Consulte link:https://docs.aws.amazon.com/secretsmanager/latest/userguide/create
 |===
 
 
+[[update-datalif-after-initial-configuration]]
 === Actualizar `dataLIF` tras la configuración inicial
 
 Puede cambiar la LIF de datos tras la configuración inicial ejecutando el siguiente comando para proporcionar el nuevo archivo JSON back-end con LIF de datos actualizadas.
@@ -168,6 +170,7 @@ NOTE: Si los RVP están conectados a uno o varios pods, deben recuperar todos lo
 
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == Opciones de configuración de back-end para el aprovisionamiento de volúmenes
 
 Puede controlar el aprovisionamiento predeterminado utilizando estas opciones en la `defaults` sección de la configuración. Para ver un ejemplo, vea los ejemplos de configuración siguientes.
@@ -211,9 +214,7 @@ Si NAE está habilitado en el back-end, cualquier volumen aprovisionado en Astra
 Para obtener más información, consulte: link:../trident-reco/security-reco.html["Cómo funciona Astra Trident con NVE y NAE"]. | `false` 
 
 
-| `luksEncryption` | Active el cifrado LUKS. Consulte link:../trident-reco/security-reco.html#Use-Linux-Unified-Key-Setup-(LUKS)["Usar la configuración de clave unificada de Linux (LUKS)"].
-
-Solo SAN. | "" 
+| `luksEncryption` | Activa el cifrado LUKS. Consulta link:../trident-reco/security-luks.html["Usar la configuración de clave unificada de Linux (LUKS)"]. Solo para SAN. | "" 
 
 
 | `tieringPolicy` | Política de organización en niveles para utilizar	`none` | `snapshot-only` Para configuraciones anteriores a ONTAP 9,5 SVM-DR 
@@ -234,6 +235,7 @@ La opción predeterminada de SMB es `ntfs`.
 |===
 
 
+[[example-configurations]]
 == Configuraciones de ejemplo
 
 .Configuración de la clase de almacenamiento para volúmenes SMB

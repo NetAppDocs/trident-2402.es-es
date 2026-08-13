@@ -16,6 +16,7 @@ Utilice los punteros que se proporcionan aquí para solucionar problemas que pue
 
 
 
+[[general-troubleshooting]]
 == Resolución de problemas generales
 
 * Si el pod de Trident no sale correctamente (por ejemplo, cuando el pod de Trident se encuentra atascado en el `ContainerCreating` fase con menos de dos contenedores listos para usar) en ejecución `kubectl -n trident describe deployment trident` y.. `kubectl -n trident describe pod trident-********-****` puede proporcionar información adicional. Obtención de registros de kubelet (por ejemplo, mediante `journalctl -xeu kubelet`) también puede ser útil.
@@ -68,6 +69,7 @@ Instalado con trimentctl::
 
 
 
+[[unsuccessful-trident-deployment-using-the-operator]]
 == Implementación incorrecta de Trident con el operador
 
 Si utiliza el operador, el estado de implementación de Trident `TridentOrchestrator` cambios de `Installing` para `Installed`. Si observa la `Failed` y el operador no puede recuperarse por sí solo, debe comprobar los registros del operador ejecutando el siguiente comando:
@@ -143,6 +145,7 @@ uno con la definición modificada y precisa.
 
 
 
+[[unsuccessful-trident-deployment-using-tridentctl]]
 == Puesta en marcha de Trident incorrecta mediante `tridentctl`
 
 Para ayudar a averiguar qué fue lo que salió mal, puede ejecutar el instalador de nuevo utilizando el ``-d`` argumento, que activa el modo de depuración y le ayuda a comprender cuál es el problema:
@@ -165,6 +168,7 @@ INFO Trident uninstallation succeeded.
 ----
 
 
+[[completely-remove-astra-trident-and-crds]]
 == Elimina por completo Astra Trident y CRD
 
 Puedes quitar por completo Astra Trident y todos los CRD creados y los recursos personalizados asociados.
@@ -204,12 +208,14 @@ tridentctl obliviate crd
 ====
 
 
+[[nvme-node-unstaging-failure-with-rwx-raw-block-namespaces-o-kubernetes-1-26]]
 == Se produce un error al anular el almacenamiento en caché del nodo de NVMe con espacios de nombres de bloque sin configurar RWX o Kubernetes 1,26
 
 Si ejecuta Kubernetes 1,26, la anulación del almacenamiento provisional del nodo puede fallar cuando se usa NVMe/TCP con espacios de nombres de bloque sin configurar de RWX. Los siguientes escenarios proporcionan una solución alternativa al fallo. También puede actualizar Kubernetes a 1,27.
 
 
 
+[[deleted-the-namespace-and-pod]]
 === Se ha eliminado el espacio de nombres y el pod
 
 Piensa en un escenario en el que tienes un espacio de nombres gestionado por Astra Trident (volumen persistente NVMe) conectado a un pod. Si elimina el espacio de nombres directamente desde el backend de ONTAP, el proceso de anulación del almacenamiento provisional se bloquea después de intentar eliminar el pod. Este escenario no afecta al clúster de Kubernetes ni a otro funcionamiento.
@@ -219,6 +225,7 @@ Desmonte el volumen persistente (que corresponde al espacio de nombres) del nodo
 
 
 
+[[blocked-datalifs]]
 === LIF de datos bloqueadas
 
  If you block (or bring down) all the dataLIFs of the NVMe Astra Trident backend, the unstaging process gets stuck when you attempt to delete the pod. In this scenario, you cannot run any NVMe CLI commands on the Kubernetes node.
@@ -227,6 +234,7 @@ Abra dataLIFS para restaurar la funcionalidad completa.
 
 
 
+[[deleted-namespace-mapping]]
 === Se ha eliminado la asignación de espacio de nombres
 
  If you remove the `hostNQN` of the worker node from the corresponding subsystem, the unstaging process gets stuck when you attempt to delete the pod. In this scenario, you cannot run any NVMe CLI commands on the Kubernetes node.
@@ -235,6 +243,7 @@ Añada el `hostNQN` de vuelta al subsistema.
 
 
 
+[[deleted-namespace-mapping]]
 === Se ha eliminado la asignación de espacio de nombres
 
 Cuando se utiliza nvme/tcp en entornos k8s con nombres de nodos largos, los pods no se pueden conectar al almacenamiento.

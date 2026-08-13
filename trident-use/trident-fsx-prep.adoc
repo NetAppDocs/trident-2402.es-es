@@ -16,6 +16,7 @@ Puede integrar su sistema de archivos Amazon FSX para ONTAP de NetApp con Astra 
 
 
 
+[[requirements]]
 == Requisitos
 
 Además de link:../trident-get-started/requirements.html["Requisitos de Astra Trident"], Para integrar FSX para ONTAP con Astra Trident, necesita:
@@ -32,13 +33,14 @@ NOTE: Asegúrese de seguir los pasos de preparación de nodos necesarios para Am
 
 
 
+[[ontap-san-and-nas-driver-integration]]
 == Integración de controladores ONTAP SAN y NAS
 
 
 WARNING: Si está configurando para volúmenes SMB, debe leer <<Prepárese para aprovisionar los volúmenes de SMB>> antes de crear el back-end.
 
 .Pasos
-. Ponga en marcha Astra Trident con una de las link:../trident-get-started/kubernetes-deploy.html["métodos de implementación"].
+. Implementa Astra Trident usando una de las link:../trident-install/kubernetes-deploy.html["métodos de implementación"].
 . Recoja el nombre de DNS del LIF de gestión de SVM. Por ejemplo, si utiliza la CLI de AWS, busque el `DNSName` entrada en `Endpoints` -> `Management` tras ejecutar el siguiente comando:
 +
 [listing]
@@ -154,6 +156,7 @@ Para obtener información sobre la creación de back-ends, consulte estos enlace
 
 
 
+[[prepare-to-provision-smb-volumes]]
 == Prepárese para aprovisionar los volúmenes de SMB
 
 Puede aprovisionar volúmenes SMB mediante el `ontap-nas` controlador. Antes de completar la tarea <<Integración de controladores ONTAP SAN y NAS>> complete los siguientes pasos.

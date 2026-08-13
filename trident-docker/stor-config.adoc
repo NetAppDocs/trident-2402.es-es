@@ -16,6 +16,7 @@ Consulte las opciones de configuración disponibles para las configuraciones de 
 
 
 
+[[global-configuration-options]]
 == Opciones de configuración global
 
 Estas opciones de configuración se aplican a todas las configuraciones de Astra Trident, independientemente de la plataforma de almacenamiento que se utilice.
@@ -71,6 +72,7 @@ Tamaño predeterminado opcional para los nuevos volúmenes. Valor predeterminado
 |===
 
 
+[[ontap-configuration]]
 == Configuración de ONTAP
 
 Además de los valores de configuración global anteriores, al utilizar ONTAP, están disponibles las siguientes opciones de nivel superior.
@@ -262,6 +264,7 @@ Política de organización en niveles que se va a utilizar, el valor predetermin
 |===
 
 
+[[scaling-options]]
 === Opciones de escala
 
 La `ontap-nas` y.. `ontap-san` Los controladores crean un ONTAP FlexVol para cada volumen Docker. ONTAP admite un máximo de 1000 FlexVols por nodo del clúster con un máximo de 12,000 FlexVols. Si los requisitos de su volumen de Docker se ajustan a esa limitación, el `ontap-nas` El controlador es la solución NAS preferida debido a las características adicionales que ofrece FlexVols, como las copias Snapshot granulares en Docker-volume y el clonado.
@@ -290,6 +293,7 @@ Para obtener funciones avanzadas y obtener un enorme escalado en el mismo entorn
 
 
 
+[[example-ontap-configuration-files]]
 === Archivos de configuración de ONTAP de ejemplo
 
 .Ejemplo de NFS para <code>ontap-nas</code> el controlador
@@ -408,6 +412,7 @@ Para obtener funciones avanzadas y obtener un enorme escalado en el mismo entorn
 ====
 
 
+[[element-software-configuration]]
 == Configuración del software Element
 
 Además de los valores de configuración global, cuando se utiliza el software Element (HCI/SolidFire de NetApp), existen estas opciones disponibles.
@@ -462,6 +467,7 @@ La `solidfire-san` El controlador no es compatible con Docker Swarm.
 
 
 
+[[example-element-software-configuration-file]]
 === Ejemplo del archivo de configuración del software Element
 
 [listing]

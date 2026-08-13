@@ -16,6 +16,7 @@ https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon
 
 
 
+[[overview]]
 == Descripción general
 
 Un sistema de archivos es el recurso principal de Amazon FSX, similar a un clúster de ONTAP en las instalaciones. En cada SVM, se pueden crear uno o varios volúmenes, que son contenedores de datos que almacenan los archivos y las carpetas en el sistema de archivos. Con Amazon FSX para ONTAP de NetApp, Data ONTAP se proporcionará como un sistema de archivos gestionado en el cloud. El nuevo tipo de sistema de archivos se llama *ONTAP* de NetApp.
@@ -24,6 +25,7 @@ Al utilizar Astra Trident con Amazon FSX para ONTAP de NetApp, puede garantizar 
 
 
 
+[[considerations]]
 == Consideraciones
 
 * Volúmenes SMB:
@@ -42,6 +44,7 @@ NOTE: Si especifica un rol de IAM en Astra Trident, puede omitir la especificaci
 
 
 
+[[fsx-for-ontap-driver-details]]
 == FSX para ONTAP detalles del controlador
 
 Puede integrar Astra Trident con Amazon FSX para ONTAP de NetApp mediante los siguientes controladores:
@@ -57,6 +60,7 @@ Para obtener información detallada sobre el conductor, consulte link:../trident
 
 
 
+[[authentication]]
 == Autenticación
 
 Astra Trident ofrece dos modos de autenticación.
@@ -79,6 +83,7 @@ Para obtener más información sobre cómo habilitar la autenticación, consulte
 
 
 
+[[cloud-identity-for-eks]]
 == Identidad de nube para EKS
 
 La identidad en la nube permite a los pods de Kubernetes acceder a los recursos de AWS mediante la autenticación como rol de AWS IAM en lugar de proporcionando credenciales explícitas de AWS.
@@ -143,6 +148,7 @@ tridentctl install --cloud-provider=$CP --cloud-identity="$CI" -n trident
 
 
 
+[[find-more-information]]
 == Obtenga más información
 
 * https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Documentación de Amazon FSX para ONTAP de NetApp"^]

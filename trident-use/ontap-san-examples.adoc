@@ -16,6 +16,7 @@ Descubre cómo crear y utilizar controladores SAN de ONTAP con tu instalación d
 
 
 
+[[backend-configuration-options]]
 == Opciones de configuración del back-end
 
 Consulte la siguiente tabla para ver las opciones de configuración del back-end:
@@ -129,6 +130,7 @@ No lo utilice a menos que esté solucionando problemas y necesite un volcado de 
 |===
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == Opciones de configuración de back-end para el aprovisionamiento de volúmenes
 
 Puede controlar el aprovisionamiento predeterminado utilizando estas opciones en la `defaults` sección de la configuración. Para ver un ejemplo, vea los ejemplos de configuración siguientes.
@@ -180,6 +182,7 @@ El cifrado LUKS no es compatible con NVMe/TCP. | ""
 |===
 
 
+[[volume-provisioning-examples]]
 === Ejemplos de aprovisionamiento de volúmenes
 
 Aquí hay un ejemplo con los valores predeterminados definidos:
@@ -225,6 +228,7 @@ En la actualidad, el cambio de tamaño es la única manera de utilizar el nuevo 
 
 
 
+[[minimal-configuration-examples]]
 == Ejemplos de configuración mínima
 
 Los ejemplos siguientes muestran configuraciones básicas que dejan la mayoría de los parámetros en los valores predeterminados. Esta es la forma más sencilla de definir un back-end.
@@ -367,6 +371,7 @@ useREST: true
 ====
 
 
+[[examples-of-backends-with-virtual-pools]]
 == Ejemplos de back-ends con pools virtuales
 
 En estos archivos de definición de backend de ejemplo, se establecen valores predeterminados específicos para todos los pools de almacenamiento, como `spaceReserve` en ninguno, `spaceAllocation` en falso, y. `encryption` en falso. Los pools virtuales se definen en la sección de almacenamiento.
@@ -508,6 +513,7 @@ storage:
 ====
 
 
+[[map-backends-to-storageclasses]]
 == Asigne los back-ends a StorageClass
 
 Las siguientes definiciones de StorageClass hacen referencia a la <<Ejemplos de back-ends con pools virtuales>>. Con el `parameters.selector` Cada StorageClass llama la atención sobre qué pools virtuales pueden usarse para alojar un volumen. El volumen tendrá los aspectos definidos en el pool virtual elegido.

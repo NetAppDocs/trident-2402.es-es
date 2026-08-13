@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: trident-get-started/kubernetes-customize-deploy-tridentctl.html 
+permalink: trident-install/kubernetes-customize-deploy-tridentctl.html 
 keywords: deploy, astra trident, methods, operator, tridentctl, helm, attributes, customize 
 summary: Puede utilizar el instalador de Astra Trident para personalizar la implementación. 
 ---
@@ -16,6 +16,7 @@ Puede utilizar el instalador de Astra Trident para personalizar la instalación.
 
 
 
+[[learn-about-the-installer]]
 == Obtenga más información sobre el instalador
 
 El instalador de Astra Trident le permite personalizar atributos. Por ejemplo, si ha copiado la imagen de Trident en un repositorio privado, puede especificar el nombre de la imagen mediante `--trident-image`. Si ha copiado la imagen Trident así como las imágenes sidecar CSI necesarias en un repositorio privado, puede que sea preferible especificar la ubicación de ese repositorio mediante el `--image-registry` switch, que toma la forma `<registry FQDN>[:port]`.

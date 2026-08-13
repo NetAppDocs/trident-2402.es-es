@@ -16,6 +16,7 @@ Obtenga información sobre cómo realizar operaciones de administración de back
 
 
 
+[[delete-a-backend]]
 == Eliminar un back-end
 
 Eliminando una `TridentBackendConfig`, Usted instruye a Astra Trident a que elimine/conserve los back-ends (basados en `deletionPolicy`). Para eliminar un back-end, asegúrese de que `deletionPolicy` está configurado para eliminar. Para eliminar sólo la `TridentBackendConfig`, asegúrese de que `deletionPolicy` se establece en retener. De esta forma se asegurará de que el backend esté todavía presente y se pueda gestionar utilizando `tridentctl`.
@@ -30,6 +31,7 @@ Astra Trident no elimina los secretos de Kubernetes que estaban en uso `TridentB
 
 
 
+[[view-the-existing-backends]]
 == Ver los back-ends existentes
 
 Ejecute el siguiente comando:
@@ -42,6 +44,7 @@ También puede ejecutar `tridentctl get backend -n trident` o. `tridentctl get b
 
 
 
+[[update-a-backend]]
 == Actualizar un back-end
 
 Puede haber varias razones para actualizar un back-end:
