@@ -177,5 +177,5 @@ Indicadores:
 
 Para obtener más información sobre el acceso de volúmenes entre espacios de nombres:
 
-* Visite link:https://cloud.netapp.com/blog/astra-blg-sharing-volumes-between-namespaces-say-hello-to-cross-namespace-volume-access["Uso compartido de volúmenes entre espacios de nombres: Dé la bienvenida al acceso al volumen entre espacios de nombres"^].
+* Mira la demo en link:https://www.netapp.com/video/solutions-and-products/["NetAppTV"^].
 
